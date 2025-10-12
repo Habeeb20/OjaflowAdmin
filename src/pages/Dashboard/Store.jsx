@@ -50,6 +50,7 @@ const BrandsList = () => {
       });
       if (!response.ok) throw new Error('Failed to fetch brands');
       const data = await response.json();
+      console.log(data, "your brand")
       setBrands(data.data || []);
       setPagination(data.pagination || { current_page: 1, total_pages: 1, total: 0 });
     } catch (err) {

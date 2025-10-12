@@ -50,13 +50,17 @@ import AddProductCategory from "./AddProductCategory";
 import ProductsList from "./ProductsList";
 import ProductCategories from "./ProductCategories";
 import BrandsList from "./Store";
+import WarehousesList from "./WareHouses";
+import AvailableProducts from "./AvailableProducts";
 const Dashboard = () => <div className="p-6">Hello Dashboard</div>;
 const Product = () => <div className="p-6"><Products /></div>
+const ProductAvailable = () => <div className="p-6"><ProductAvailable /></div>
 const Categories = () => <div className="p-6"><ProductCategories /></div>
 const ListUsers = () => <div className="p-6"><User/></div>
 const AddProduct = () => <div className="p-6"><AddProductCategory/></div>
 const ProductList = () => <div className="p-6"> <ProductsList /></div>
 const Stores = () => <div className="p-6"> <BrandsList/></div>
+const WareHouse = () => <div className="p-6"><WarehousesList /></div>
 const Inventory = () => <div className="p-6">Hello Inventory</div>;
 const Orders = () => <div className="p-6">Hi Orders</div>;
 const Customers = () => <div className="p-6">Hi Customers</div>;
@@ -92,12 +96,14 @@ const AdminDashboard = () => {
 
   const sidebarItems = [
     { id: "dashboard", label: "Dashboard", icon: Home, href: "/admin" },
-    { id: "Product", label: "Products", icon: Home, href: "/admin" },
+    { id: "Product", label: "Product", icon: Home, href: "/admin" },
+    { id: "ProductsAvailable", label: "Products", icon: Home, href: "/admin" },
     { id: "Categories", label: "Categories", icon: Home, href: "/admin" },
     { id: "ListUsers", label: "Users", icon: Home, href: "/admin" },
     { id: "AddProduct", label: "AddProduct", icon: Home, href: "/admin" },
     { id: "ProductList", label: "ProductList", icon: Home, href: "/admin" },
     { id: "Store", label: "BrandsList", icon: Home, href: "/admin" },
+    { id: "WareHouse", label: "WareHouses", icon: Home, href: "/admin" },
   
     { id: "inventory", label: "Inventory", icon: Package, href: "/admin/inventory" },
     { id: "orders", label: "Orders", icon: ShoppingCart, href: "/admin/orders" },
@@ -175,12 +181,14 @@ const AdminDashboard = () => {
     switch (activeTab) {
       case "dashboard": return <Dashboard />;
       case "Product": return <Product />;
+      case "ProductsAvailable": return <AvailableProducts/>
       case "Categories": return <Categories />
       case "inventory": return <Inventory />;
       case "ListUsers" : return <ListUsers />
       case "AddProduct" : return <AddProductCategory />
       case "ProductList" : return <ProductsList />
       case "Store" : return <BrandsList />
+      case "WareHouse" : return <WarehousesList />
       case "orders": return <Orders />;
       case "customers": return <Customers />;
       case "analytics": return <Analytics />;

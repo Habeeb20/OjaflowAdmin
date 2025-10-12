@@ -55,9 +55,10 @@ const ProductsPage = () => {
         setSearchResults(searchData.data || []);
       }
 
-      const childrenRes = await fetch(`${baseUrl}/api/product-categories/children/16`);
+      const childrenRes = await fetch(`${baseUrl}/api/product-categories`);
       if (childrenRes.ok) {
         const childrenData = await childrenRes.json();
+        console.log(childrenData, "your children data is here!!!")
         setChildrenCategories(childrenData.data || []);
       }
 
