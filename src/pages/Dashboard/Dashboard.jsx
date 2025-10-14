@@ -52,6 +52,8 @@ import ProductCategories from "./ProductCategories";
 import BrandsList from "./Store";
 import WarehousesList from "./WareHouses";
 import AvailableProducts from "./AvailableProducts";
+import WearHouseTransfer from "./WearHouseTransfer"
+import TagsList from "./TagList";
 const Dashboard = () => <div className="p-6">Hello Dashboard</div>;
 const Product = () => <div className="p-6"><Products /></div>
 const ProductAvailable = () => <div className="p-6"><ProductAvailable /></div>
@@ -61,8 +63,8 @@ const AddProduct = () => <div className="p-6"><AddProductCategory/></div>
 const ProductList = () => <div className="p-6"> <ProductsList /></div>
 const Stores = () => <div className="p-6"> <BrandsList/></div>
 const WareHouse = () => <div className="p-6"><WarehousesList /></div>
-const Inventory = () => <div className="p-6">Hello Inventory</div>;
-const Orders = () => <div className="p-6">Hi Orders</div>;
+const Inventory = () => <div className="p-6"><WearHouseTransfer/></div>;
+const Orders = () => <div className="p-6"><TagsList/></div>;
 const Customers = () => <div className="p-6">Hi Customers</div>;
 const Analytics = () => <div className="p-6">Hi Analytics</div>;
 const Setting = () => <div className="p-6">Settings Page</div>;
@@ -106,7 +108,7 @@ const AdminDashboard = () => {
     { id: "WareHouse", label: "WareHouses", icon: Home, href: "/admin" },
   
     { id: "inventory", label: "Inventory", icon: Package, href: "/admin/inventory" },
-    { id: "orders", label: "Orders", icon: ShoppingCart, href: "/admin/orders" },
+    { id: "orders", label: "Tags", icon: ShoppingCart, href: "/admin/orders" },
     { id: "customers", label: "Customers", icon: Users, href: "/admin/customers" },
     { id: "analytics", label: "Analytics", icon: BarChart3, href: "/admin/analytics" },
     { id: "setting", label: "Settings", icon: Settings, href: "/admin/settings" },
