@@ -25,6 +25,8 @@ const AdminUsersPage = () => {
       return;
     }
 
+    console.log(token)
+
     setLoading(true);
     setError(null);
     try {
@@ -37,10 +39,11 @@ const AdminUsersPage = () => {
           'Authorization': `Bearer ${token}`,
         },
       });
-      console.log(response)
+    
       if (!response.ok) throw new Error('Failed to fetch users');
       const data = await response.json();
-      setUsers(data.data || []);
+      setUsers(data.users || []);
+      console.log(data)
       setPagination(data.pagination || { current_page: 1, total_pages: 1, total: 0 });
     } catch (err) {
         console.log(err)
