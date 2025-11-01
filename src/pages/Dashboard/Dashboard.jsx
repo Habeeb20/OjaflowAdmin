@@ -719,10 +719,10 @@ const AdminDashboard = () => {
   const sidebarItems = [
     { id: "dashboard", label: "Dashboard", icon: Home, href: "/admin" },
     { id: "Product", label: "Product", icon: Home, href: "/admin" },
-    { id: "ProductsAvailable", label: "Products", icon: Home, href: "/admin" },
+    { id: "ProductsAvailable", label: "Add Products", icon: Home, href: "/admin" },
     { id: "Categories", label: "Categories", icon: Home, href: "/admin" },
     { id: "ListUsers", label: "Users", icon: Home, href: "/admin" },
-    { id: "AddProduct", label: "AddProduct", icon: Home, href: "/admin" },
+    { id: "AddProduct", label: "Add Product category", icon: Home, href: "/admin" },
     { id: "ProductList", label: "ProductList", icon: Home, href: "/admin" },
     { id: "Store", label: "BrandsList", icon: Home, href: "/admin" },
     { id: "WareHouse", label: "WareHouses", icon: Home, href: "/admin" },
